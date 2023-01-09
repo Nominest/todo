@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  color: black;
+  margin-top: 50px;
+}
+ul {
+  list-style-type: none;
+  background-color: rgb(217, 219, 216);
+  margin: auto;
+  width: 80vw;
+  margin-top: 50px;
+}
