@@ -13,7 +13,11 @@ function App() {
     console.log(e.target.value);
     item = e.target.value;
   };
-
+  const deleteTodo = (index) => {
+    item = [...todos];
+    item.splice(index, 1);
+    setTodos(item);
+  };
   return (
     <div className="App">
       <div>
@@ -24,7 +28,12 @@ function App() {
 
         <ul>
           {todos.map((todo, index) => (
-            <li key={index}>{todo}</li>
+            <li key={index}>
+              {todo}{" "}
+              <button id="delete" onClick={() => deleteTodo(index)}>
+                delete
+              </button>
+            </li>
           ))}
         </ul>
       </div>
